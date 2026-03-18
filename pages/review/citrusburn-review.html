@@ -182,10 +182,14 @@
                 <p><strong>Weeks 7-8 (Stabilization)</strong>: Personal total 6.5 lbs loss; client group avg. 5.8 lbs, consistent daily energy.</p>
 
                 <div class="chart-container">
-                    <h3>8-Week Weight Loss Trend</h3>
-                    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">Average weight loss across 5 test subjects (lbs)</p>
-                    <img src="/images/products/citrusburn/weight-loss-chart.webp" alt="8-Week Weight Loss Chart" class="chart-img">
-                </div>
+    <h3>8-Week Weight Loss Trend</h3>
+    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">Average weight loss across 5 test subjects (lbs)</p>
+    <!-- 🔴 确保图片存在，路径正确 -->
+    <img src="/images/products/citrusburn/weight-loss-chart.webp" 
+         alt="8-Week Weight Loss Chart" 
+         class="chart-img"
+         onerror="this.style.display='none'; this.parentElement.innerHTML+='<p style=\'color:var(--text-muted);font-size:14px;\'>Chart coming soon</p>';">
+</div>
 
                 <div class="testimonials-section">
                     <h3>What Real Users Are Saying</h3>
@@ -271,7 +275,17 @@
                         <strong>How to Refund:</strong> Simply contact support via the email on your order confirmation within 180 days. Return even empty bottles for a full refund.
                     </p>
                 </div>
+<!-- 🔴 新增：相关分类/成分推荐 -->
+<div style="background: var(--light-green-bg); padding: 30px; border-radius: 20px; margin: 40px 0;">
+    <h3 style="color: var(--primary-green); margin-top: 0;">Explore More</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px;">
+        <a href="/category/weight-loss" class="header-nav-btn">Weight Loss Category</a>
+        <a href="/ingredients/green-tea" class="header-nav-btn">Green Tea Ingredient Guide</a>
+        <a href="/category/sleep-support" class="header-nav-btn">Sleep Support Supplements</a>
+    </div>
+</div>
 
+<h2 id="verdict">Final Verdict: Is It Worth It?</h2>
                 <h2 id="usage">Detailed Usage Guide & Safety Information</h2>
                 <h3>How to Take CitrusBurn for Best Results</h3>
                 <ul>

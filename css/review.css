@@ -1,14 +1,16 @@
 /* 这里的样式会在第二步拆分到 css/review.css */
         :root {
-            --primary-orange: #FF6B35;
-            --dark-blue: #0A2463;
-            --light-bg: #F8FAFC;
-            --text-main: #1A202C;
-            --text-muted: #4A5568;
-            --border-color: #E2E8F0;
-            --pill-green: #E6FFFA;
-            --pill-green-text: #285E61;
-        }
+    /* 🔴 旧配色（橙色/深蓝）替换为健康绿系 */
+    --primary-green: #1E5631;       /* 主色：深森林绿（健康、专业） */
+    --accent-green: #2D8A4E;        /* 强调色：亮绿（按钮、高亮） */
+    --light-green-bg: #F0F7F2;       /* 浅绿背景（卡片、模块） */
+    --text-main: #1A202C;            /* 主文字：深灰 */
+    --text-muted: #4A5568;           /* 辅助文字：中灰 */
+    --border-color: #E2E8F0;         /* 边框：浅灰 */
+    --pill-green: #E6FFFA;           /* 标签背景：极浅绿 */
+    --pill-green-text: #285E61;      /* 标签文字：深绿 */
+    --link-color: #2D3748;           /* 🔗 外链颜色：深灰蓝（不冲突） */
+}
 
         * { box-sizing: border-box; scroll-behavior: smooth; }
         body { 
@@ -324,3 +326,65 @@
             .package-img { width: 80%; }
             .verdict-card { flex-direction: column; }
         }
+		
+		/* --- 新增：全局页眉样式 --- */
+.global-header {
+    background: white;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-logo {
+    height: 45px; /* 调整Logo高度 */
+    width: auto;
+}
+.header-nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.header-nav-btn {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    transition: all 0.2s;
+}
+.header-nav-btn:hover {
+    background: var(--light-green-bg);
+    color: var(--primary-green);
+}
+.header-nav-btn.primary {
+    background: var(--primary-green);
+    color: white;
+}
+.header-nav-btn.primary:hover {
+    background: var(--accent-green);
+}
+
+/* --- 优化：外链颜色（不与主色冲突） --- */
+article a {
+    color: var(--link-color);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+article a:hover {
+    color: var(--primary-green);
+}
+
+/* --- 修复：保障模块文字颜色 --- */
+.guarantee-box h3,
+.guarantee-box p {
+    color: white !important;
+}
