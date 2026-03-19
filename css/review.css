@@ -714,3 +714,32 @@ th .header-product-link:hover {
     color: var(--pill-green);
     text-decoration-thickness: 2px;
 }
+/* 多作者卡片补充样式 */
+.author-title {
+    font-size: 12px;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 10px;
+}
+.author-specialties {
+    margin-bottom: 15px;
+}
+.author-bio {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 15px;
+    line-height: 1.6;
+}
+.author-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary-green);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.author-link:hover {
+    color: var(--accent-green);
+    text-decoration: underline;
+}

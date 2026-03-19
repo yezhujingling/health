@@ -406,21 +406,34 @@
         <!-- 侧边栏 -->
         <aside class="sidebar-column">
             <!-- 作者卡片（修复：头像加载失败也显示占位） -->
-            <div class="author-card">
-                <img src="/images/common/tx.webp" class="author-avatar" alt="Clinical Health Manager" 
-                     onerror="this.onerror=null; this.style.display='none'; this.parentElement.querySelector('.avatar-placeholder').style.display='flex';">
-                <div class="avatar-placeholder">👨‍⚕️</div>
-                <h3 class="author-name">NCMA-Certified Expert</h3>
-                <span style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 10px;">Clinical Health Manager</span>
-                <div>
-                    <span class="author-badge">8 YRS EXP</span>
-                    <span class="author-badge">METABOLIC HEALTH</span>
-                    <span class="author-badge">100+ FORMULAS TESTED</span>
-                </div>
-                <p style="font-size: 13px; color: var(--text-muted); margin-top: 15px;">
-                    Independent reviewer specializing in sustainable weight management. Unbiased, data-backed testing for Euro-American markets.
-                </p>
-            </div>
+            <!-- 侧边栏作者卡片（通用模板，支持多作者） -->
+<div class="author-card">
+    <!-- 作者头像：不同作者用不同图片路径 -->
+    <img src="/images/authors/dr-sarah.webp" class="author-avatar" alt="Dr. Sarah Miller" 
+         onerror="this.onerror=null; this.style.display='none'; this.parentElement.querySelector('.avatar-placeholder').style.display='flex';">
+    <div class="avatar-placeholder">👨‍⚕️</div>
+    
+    <!-- 作者姓名：不同页面改这里 -->
+    <h3 class="author-name">Dr. Sarah Miller</h3>
+    
+    <!-- 作者专业头衔 -->
+    <span class="author-title">NCMA-Certified Clinical Health Manager</span>
+    
+    <!-- 作者专业领域标签：不同作者改这里 -->
+    <div class="author-specialties">
+        <span class="author-badge">Weight Loss</span>
+        <span class="author-badge">Blood Sugar</span>
+        <span class="author-badge">Metabolic Health</span>
+    </div>
+    
+    <!-- 作者简介：不同作者改这里 -->
+    <p class="author-bio">
+        Former clinical nutritionist with 8 years of experience in sustainable weight management. Specializes in evidence-based metabolic recovery for adults 30+.
+    </p>
+    
+    <!-- 作者专栏链接（可选） -->
+    <a href="/author/dr-sarah/" class="author-link">View All Reviews by Dr. Sarah →</a>
+</div>
 
             <!-- 吸顶目录+CTA -->
             <div class="sticky-wrapper">
