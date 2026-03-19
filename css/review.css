@@ -195,18 +195,38 @@ article h3 {
 
 /* 表格样式 */
 table { 
-    width: 100%; 
-    border-collapse: collapse; 
-    margin: 25px 0; 
+  width: 100%; 
+  border-collapse: collapse; 
+  margin: 25px 0; 
+  background: var(--white); /* 表格背景白色，和页面浅色背景区分 */
+  border-radius: 12px; 
+  overflow: hidden; /* 让圆角生效 */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 th, td { 
-    padding: 15px; 
-    text-align: left; 
-    border-bottom: 1px solid var(--border-color); 
+  padding: 15px; 
+  text-align: left; 
 }
 th { 
-    background-color: var(--light-green-bg); 
-    color: var(--primary-green); 
+  background-color: var(--primary-green); 
+  color: var(--white); /* 表头文字白色，背景深绿 */
+  font-weight: 700;
+}
+td { 
+  border-bottom: 1px solid var(--border-color); 
+  color: var(--text-main); /* 单元格文字深色 */
+}
+
+/* 适配深色背景下的表格（比如放在 verdict-card 里时） */
+.dark-table table {
+  background: rgba(27, 67, 50, 0.95);
+}
+.dark-table th {
+  background: var(--accent-green);
+}
+.dark-table td {
+  color: var(--white);
+  border-bottom-color: rgba(255,255,255,0.1);
 }
 
 /* 6格成分布局 */
@@ -374,17 +394,19 @@ th {
     margin: 40px 0;
 }
 .guarantee-badge {
-    width: 100px;
-    height: 100px;
-    background: var(--white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px auto;
-    font-size: 24px;
-    font-weight: 800;
-    color: var(--primary-green);
+  width: 120px; /* 加宽 */
+  height: 120px;
+  background: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+  font-size: 20px; /* 缩小字号 */
+  font-weight: 800;
+  color: var(--primary-green);
+  text-align: center;
+  line-height: 1.2;
 }
 .guarantee-box h3 {
     color: var(--white);
@@ -426,12 +448,14 @@ th {
     box-shadow: 0 4px 20px rgba(0,0,0,0.03);
 }
 .author-avatar { 
-    width: 80px; 
-    height: 80px; 
-    border-radius: 50%; 
-    background: var(--pill-green); 
-    margin: 0 auto 15px auto; 
-    border: 3px solid #B2F5EA; 
+  width: 80px; 
+  height: 80px; 
+  border-radius: 50%; 
+  background: var(--pill-green); 
+  margin: 0 auto 15px auto; 
+  border: 3px solid #B2F5EA; 
+  object-fit: cover; /* 让头像完整填充圆形 */
+  display: block;
 }
 .author-name { 
     font-weight: 800; 
