@@ -6,8 +6,8 @@
     <title>CitrusBurn Review 2026: 8-Week Test, Ingredient Breakdown & Real User Results</title>
     <!-- 外部字体 -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- 调用外部CSS（加版本号防缓存） -->
-    <link rel="stylesheet" href="/css/review.css?v=2">
+    <!-- 调用外部CSS（加版本号防缓存，修改后改v=3强制刷新） -->
+    <link rel="stylesheet" href="/css/review.css?v=3">
 </head>
 <body>
     <!-- 全局页眉（Logo+分类/成分导航） -->
@@ -19,10 +19,10 @@
             </a>
             <!-- 导航按钮 -->
             <nav class="header-nav">
-  <a href="/pages/category/weight-loss/" class="header-nav-btn">Top Categories</a>
-  <a href="/pages/Ingredients/magnesium/" class="header-nav-btn">Ingredients Wiki</a>
-  <a href="/" class="header-nav-btn primary">Home</a>
-</nav>
+                <a href="/pages/category/weight-loss/" class="header-nav-btn">Top Categories</a>
+                <a href="/pages/Ingredients/magnesium/" class="header-nav-btn">Ingredients Wiki</a>
+                <a href="/" class="header-nav-btn primary">Home</a>
+            </nav>
         </div>
     </header>
 
@@ -81,7 +81,7 @@
                     <tr><td>Guarantee</td><td>180-Day "Empty Bottle" Money-Back Guarantee</td></tr>
                 </table>
 
-                <!-- 竞品横向对比表格 -->
+                <!-- 竞品横向对比表格（修复：弱化竞品缺点+加跳转链接） -->
                 <h2 id="comparison">How Does It Stack Up? | CitrusBurn vs. Competitors</h2>
                 <p>We compared CitrusBurn head-to-head with the top non-stimulant fat burners on ClickBank to see how it measures up:</p>
                 <div class="comparison-table">
@@ -89,26 +89,26 @@
                         <tr>
                             <th>Comparison</th>
                             <th class="best-pick">CitrusBurn</th>
-                            <th>Java Burn</th>
-                            <th>Ikaria Juice</th>
+                            <th><a href="/pages/review/Java-Burn/" class="product-link">Java Burn</a></th>
+                            <th><a href="/pages/review/Ikaria-Juice/" class="product-link">Ikaria Juice</a></th>
                         </tr>
                         <tr>
                             <td><strong>Core Formula</strong></td>
                             <td class="best-pick">Sinetrol® Citrus Patent</td>
-                            <td>Green Tea + Caffeine</td>
-                            <td>Herbal Blend</td>
+                            <td>Green Tea + Caffeine Blend</td>
+                            <td>Superfood Herbal Blend</td>
                         </tr>
                         <tr>
                             <td><strong>Stimulant-Free</strong></td>
                             <td class="best-pick">✅ Yes</td>
-                            <td>❌ No (Contains Caffeine)</td>
+                            <td>❌ Contains Low-Dose Caffeine</td>
                             <td>✅ Yes</td>
                         </tr>
                         <tr>
                             <td><strong>Time to Visible Results</strong></td>
-                            <td class="best-pick">4-8 Weeks</td>
-                            <td>1-2 Weeks (Caffeine Crash)</td>
-                            <td>6-12 Weeks</td>
+                            <td class="best-pick">4-8 Weeks (Sustained)</td>
+                            <td>1-2 Weeks (Fast Energy Boost)</td>
+                            <td>6-12 Weeks (Gradual)</td>
                         </tr>
                         <tr>
                             <td><strong>Price per Month</strong></td>
@@ -202,15 +202,17 @@
                 <p><strong>Weeks 3-6 (Pants Test)</strong>: Avg. 4.2 lbs weight loss + 1.2 inches waist reduction (fat loss, not water weight).</p>
                 <p><strong>Weeks 7-8 (Stabilization)</strong>: Personal total 6.5 lbs loss; client group avg. 5.8 lbs, consistent daily energy.</p>
 
-                <!-- 8周数据图表（彻底修复无限循环） -->
+                <!-- 8周数据图表（修复：图片加载失败也有完整占位） -->
                 <div class="chart-container">
                     <h3>8-Week Weight Loss Trend</h3>
                     <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">Average weight loss across 5 test subjects (lbs)</p>
                     <img src="/images/products/citrusburn/weight-loss-chart.webp" 
                          alt="8-Week Weight Loss Chart" 
                          class="chart-img"
-                         onerror="this.onerror=null; this.style.display='none'; this.parentElement.querySelector('.chart-placeholder').style.display='block';">
-                    <p class="chart-placeholder">Chart coming soon</p>
+                         onerror="this.onerror=null; this.style.display='none'; this.parentElement.querySelector('.chart-placeholder').style.display='flex';">
+                    <div class="chart-placeholder">
+                        <span>Chart coming soon</span>
+                    </div>
                 </div>
 
                 <!-- 真实用户评价模块 -->
@@ -290,14 +292,14 @@
                     <tr><td>6 Bottles (Transformation)</td><td>$49</td><td>180 Days</td><td>Best value + free USA shipping</td></tr>
                 </table>
 
-                <!-- 180天退款保障模块 -->
+                <!-- 180天退款保障模块（修复：文字清晰不重合） -->
                 <div class="guarantee-box">
                     <div class="guarantee-badge">180-DAY<br>GUARANTEE</div>
                     <h3>100% Satisfaction, No Questions Asked</h3>
                     <p style="font-size: 16px; max-width: 700px; margin: 0 auto;">
                         Your order is protected by our no-risk 180-day money-back guarantee. If you're not amazed at how quickly your body feels lighter, more energized, and visibly transformed—or if you're not thrilled by how your metabolism responds—just let us know within the next 180 days and we'll refund every cent of your purchase. No questions asked, no hoops to jump through.
                     </p>
-                    <p style="font-size: 14px; opacity: 0.8; margin-top: 20px;">
+                    <p style="font-size: 14px; margin-top: 20px; font-weight: 500;">
                         <strong>How to Refund:</strong> Simply contact support via the email on your order confirmation within 180 days. Return even empty bottles for a full refund.
                     </p>
                 </div>
@@ -330,15 +332,15 @@
                     <li>❌ Contains trace amounts of citrus (avoid if you have severe citrus allergy)</li>
                 </ul>
 
-                <!-- 相关分类/成分跳转推荐 -->
+                <!-- 相关分类/成分跳转推荐（修复：按钮样式完整） -->
                 <div class="category-recommend">
-  <h3>Explore More</h3>
-  <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px;">
-    <a href="/pages/category/weight-loss/" class="header-nav-btn">Weight Loss Category</a>
-    <a href="/pages/Ingredients/Green-Tea-Extract/" class="header-nav-btn">Green Tea Ingredient Guide</a>
-    <a href="/pages/category/sleep-support/" class="header-nav-btn">Sleep Support Supplements</a>
-  </div>
-</div>
+                    <h3>Explore More</h3>
+                    <div class="recommend-buttons">
+                        <a href="/pages/category/weight-loss/" class="recommend-btn">Weight Loss Category</a>
+                        <a href="/pages/Ingredients/Green-Tea-Extract/" class="recommend-btn">Green Tea Ingredient Guide</a>
+                        <a href="/pages/category/sleep-support/" class="recommend-btn">Sleep Support Supplements</a>
+                    </div>
+                </div>
 
                 <!-- 最终结论 -->
                 <h2 id="verdict">Final Verdict: Is It Worth It?</h2>
@@ -371,21 +373,22 @@
 
         <!-- 侧边栏 -->
         <aside class="sidebar-column">
-            <!-- 作者卡片 -->
+            <!-- 作者卡片（修复：头像加载失败也显示占位） -->
             <div class="author-card">
-  <img src="/images/common/tx.webp" class="author-avatar" alt="Clinical Health Manager" 
-       onerror="this.onerror=null; this.style.display='none';">
-  <h3 class="author-name">NCMA-Certified Expert</h3>
-  <span style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 10px;">Clinical Health Manager</span>
-  <div>
-    <span class="author-badge">8 YRS EXP</span>
-    <span class="author-badge">METABOLIC HEALTH</span>
-    <span class="author-badge">100+ FORMULAS TESTED</span>
-  </div>
-  <p style="font-size: 13px; color: var(--text-muted); margin-top: 15px;">
-    Independent reviewer specializing in sustainable weight management. Unbiased, data-backed testing for Euro-American markets.
-  </p>
-</div>
+                <img src="/images/common/tx.webp" class="author-avatar" alt="Clinical Health Manager" 
+                     onerror="this.onerror=null; this.style.display='none'; this.parentElement.querySelector('.avatar-placeholder').style.display='flex';">
+                <div class="avatar-placeholder">👨‍⚕️</div>
+                <h3 class="author-name">NCMA-Certified Expert</h3>
+                <span style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 10px;">Clinical Health Manager</span>
+                <div>
+                    <span class="author-badge">8 YRS EXP</span>
+                    <span class="author-badge">METABOLIC HEALTH</span>
+                    <span class="author-badge">100+ FORMULAS TESTED</span>
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted); margin-top: 15px;">
+                    Independent reviewer specializing in sustainable weight management. Unbiased, data-backed testing for Euro-American markets.
+                </p>
+            </div>
 
             <!-- 吸顶目录+CTA -->
             <div class="sticky-wrapper">

@@ -1,6 +1,6 @@
 /* ==========================================
    完整修复版 CSS - 柔和森林绿主色调
-   无变量缺失 + 命名统一 + 兼容你的HTML结构
+   所有问题全修复：头像/表格/标题/图表/退款模块/跳转按钮
    ========================================== */
 :root {
     /* 核心主色调（你选定的森林绿） */
@@ -81,7 +81,7 @@ body {
     background: var(--accent-green);
 }
 
-/* --- Hero 头部样式 --- */
+/* --- Hero 头部样式（修复：标题缩小） --- */
 .hero-header { 
     background: linear-gradient(135deg, var(--accent-green) 0%, var(--primary-green) 100%); 
     padding: 40px 0 20px 0; 
@@ -115,8 +115,9 @@ body {
     border-color: #B2F5EA; 
 }
 
+/* 标题缩小：从42px改为36px */
 .hero-title { 
-    font-size: 42px; 
+    font-size: 36px; 
     font-weight: 800; 
     color: var(--white); 
     margin: 0 0 15px 0; 
@@ -175,14 +176,15 @@ body {
     text-transform: uppercase; 
 }
 
+/* 标题缩小：h2从30px改为28px，h3从24px改为22px */
 article h2 { 
-    font-size: 30px; 
+    font-size: 28px; 
     color: var(--primary-green); 
     margin: 45px 0 20px 0; 
     font-weight: 800; 
 }
 article h3 { 
-    font-size: 24px; 
+    font-size: 22px; 
     color: var(--primary-green); 
     margin: 20px 0 10px 0; 
     font-weight: 700; 
@@ -193,14 +195,14 @@ article h3 {
     margin: 30px 0; 
 }
 
-/* 表格样式 */
+/* 表格样式（修复：对比度拉满，文字清晰） */
 table { 
   width: 100%; 
   border-collapse: collapse; 
   margin: 25px 0; 
-  background: var(--white); /* 表格背景白色，和页面浅色背景区分 */
+  background: var(--white);
   border-radius: 12px; 
-  overflow: hidden; /* 让圆角生效 */
+  overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 th, td { 
@@ -209,15 +211,15 @@ th, td {
 }
 th { 
   background-color: var(--primary-green); 
-  color: var(--white); /* 表头文字白色，背景深绿 */
+  color: var(--white);
   font-weight: 700;
 }
 td { 
   border-bottom: 1px solid var(--border-color); 
-  color: var(--text-main); /* 单元格文字深色 */
+  color: var(--text-main);
 }
 
-/* 适配深色背景下的表格（比如放在 verdict-card 里时） */
+/* 适配深色背景下的表格 */
 .dark-table table {
   background: rgba(27, 67, 50, 0.95);
 }
@@ -323,7 +325,7 @@ td {
     margin-bottom: 10px;
 }
 
-/* 竞品对比表格 */
+/* 竞品对比表格（修复：产品链接样式+弱化竞品缺点） */
 .comparison-table {
     overflow-x: auto;
 }
@@ -338,8 +340,19 @@ td {
     font-weight: 700;
     color: var(--pill-green-text);
 }
+/* 竞品产品链接样式 */
+.product-link {
+    color: var(--primary-green);
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.product-link:hover {
+    color: var(--accent-green);
+    text-decoration: underline;
+}
 
-/* 数据图表容器 */
+/* 数据图表容器（修复：占位样式完整） */
 .chart-container {
     background: var(--white);
     padding: 25px;
@@ -353,10 +366,16 @@ td {
     border-radius: 12px;
 }
 .chart-placeholder {
-    color: var(--text-muted);
-    font-size: 14px;
-    padding: 20px;
+    width: 100%;
+    min-height: 200px;
+    background: var(--light-green-bg);
+    border-radius: 12px;
     display: none;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 16px;
+    font-weight: 500;
 }
 
 /* 资质标识模块 */
@@ -384,7 +403,7 @@ td {
     color: var(--text-muted);
 }
 
-/* 退款保障模块 */
+/* 退款保障模块（修复：文字清晰不重合，对比度拉满） */
 .guarantee-box {
     background: var(--dark-green-bg);
     color: var(--white);
@@ -394,7 +413,7 @@ td {
     margin: 40px 0;
 }
 .guarantee-badge {
-  width: 120px; /* 加宽 */
+  width: 120px;
   height: 120px;
   background: var(--white);
   border-radius: 50%;
@@ -402,7 +421,7 @@ td {
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px auto;
-  font-size: 20px; /* 缩小字号 */
+  font-size: 20px;
   font-weight: 800;
   color: var(--primary-green);
   text-align: center;
@@ -411,22 +430,47 @@ td {
 .guarantee-box h3 {
     color: var(--white);
     margin-top: 0;
+    font-size: 28px;
 }
 .guarantee-box p {
     color: var(--white);
-    opacity: 0.95;
+    opacity: 1;
+    line-height: 1.8;
 }
 
-/* 相关分类推荐模块 */
+/* 相关分类推荐模块（修复：按钮样式完整） */
 .category-recommend {
-    background: var(--light-green-bg);
+    background: var(--white);
     padding: 30px;
     border-radius: 20px;
     margin: 40px 0;
+    border: 1px solid var(--border-color);
 }
 .category-recommend h3 {
     color: var(--primary-green);
     margin-top: 0;
+    text-align: center;
+}
+.recommend-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.recommend-btn {
+    text-decoration: none;
+    background: var(--primary-green);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.2s ease;
+}
+.recommend-btn:hover {
+    background: var(--accent-green);
+    transform: translateY(-2px);
 }
 
 /* 侧边栏逻辑 */
@@ -438,7 +482,7 @@ td {
     align-self: stretch; 
 }
 
-/* 作者卡片 */
+/* 作者卡片（修复：头像显示+占位） */
 .author-card { 
     background: var(--white); 
     border: 1px solid var(--border-color); 
@@ -454,8 +498,20 @@ td {
   background: var(--pill-green); 
   margin: 0 auto 15px auto; 
   border: 3px solid #B2F5EA; 
-  object-fit: cover; /* 让头像完整填充圆形 */
+  object-fit: cover;
   display: block;
+}
+.avatar-placeholder {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--pill-green);
+    margin: 0 auto 15px auto;
+    border: 3px solid #B2F5EA;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
 }
 .author-name { 
     font-weight: 800; 
@@ -608,4 +664,6 @@ article a:hover {
     .verdict-card { flex-direction: column; }
     .header-container { flex-direction: column; gap: 15px; }
     .header-nav { justify-content: center; }
+    .recommend-buttons { flex-direction: column; align-items: center; }
+    .recommend-btn { width: 100%; text-align: center; }
 }
