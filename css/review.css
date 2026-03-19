@@ -1,39 +1,37 @@
-/* 方案3：分区域配色（最专业、最舒适，推荐最终使用） */
+/* ==========================================
+   完整修复版 CSS - 柔和森林绿主色调
+   无变量缺失 + 命名统一 + 兼容你的HTML结构
+   ========================================== */
 :root {
-    /* 深绿：仅用于强调区 */
-    --bg-emphasis: #1B4332;
-    /* 淡绿：用于正文/分类区 */
-    --bg-light: #F0F7F2;
-    /* 通用色 */
+    /* 核心主色调（你选定的森林绿） */
+    --primary-green: #1B4332;
+    --accent-green: #2D6A4F;
+    --light-green: #40916C;
+    --light-green-bg: #F0F7F2;
+    --dark-green-bg: #1B4332;
+    
+    /* 功能色 */
+    --white: #FFFFFF;
     --text-main: #1A202C;
-    --text-white: #FFFFFF;
+    --text-muted: #4A5568;
+    --border-color: #D8F3DC;
+    --pill-green: #9AE6B4;
+    --pill-green-text: #1B4332;
+    --link-color: #2B6CB0;
     --btn-purple: #C026D3;
 }
 
-/* 1. 正文/分类区背景（淡绿，阅读舒适） */
-body, .content-main {
-    background: var(--bg-light);
+* { 
+    box-sizing: border-box; 
+    scroll-behavior: smooth; 
 }
 
-/* 2. 核心结论卡片/页眉背景（深绿，突出重点） */
-section.verdict-card, .hero-header {
-    background: linear-gradient(135deg, #2D6A4F 0%, var(--bg-emphasis) 100%);
-    color: var(--text-white);
-}
-
-/* 3. 侧边栏/其他区域适配 */
-.sidebar-column .author-card {
-    background: white;
-    border: 1px solid var(--border-color);
-}
-
-* { box-sizing: border-box; scroll-behavior: smooth; }
 body { 
     font-family: 'Inter', sans-serif; 
     line-height: 1.6; 
     color: var(--text-main); 
     margin: 0; 
-    background-color: var(--white);
+    background-color: var(--light-green-bg);
 }
 
 /* --- 全局页眉样式（Logo+导航） --- */
@@ -85,9 +83,10 @@ body {
 
 /* --- Hero 头部样式 --- */
 .hero-header { 
-    background-color: var(--white); 
+    background: linear-gradient(135deg, var(--accent-green) 0%, var(--primary-green) 100%); 
     padding: 40px 0 20px 0; 
     border-bottom: 1px solid var(--border-color); 
+    color: var(--white);
 }
 .hero-container { 
     max-width: 1200px; 
@@ -119,14 +118,15 @@ body {
 .hero-title { 
     font-size: 42px; 
     font-weight: 800; 
-    color: var(--primary-green); 
+    color: var(--white); 
     margin: 0 0 15px 0; 
     line-height: 1.1; 
     letter-spacing: -1px; 
 }
 .hero-subtitle { 
     font-size: 18px; 
-    color: var(--text-muted); 
+    color: var(--white); 
+    opacity: 0.9;
     max-width: 850px; 
 }
 
@@ -144,10 +144,11 @@ body {
 .content-main { 
     flex: 2.2; 
     min-width: 0; 
+    background: var(--light-green-bg);
 }
 
 .verdict-card { 
-    background: var(--primary-green); 
+    background: linear-gradient(135deg, var(--accent-green) 0%, var(--primary-green) 100%); 
     color: var(--white); 
     border-radius: 24px; 
     padding: 30px; 
@@ -461,7 +462,8 @@ th {
 }
 
 .toc-card { 
-    background: var(--light-green-bg); 
+    background: var(--white); 
+    border: 1px solid var(--border-color);
     border-radius: 24px; 
     padding: 25px; 
     overflow-y: auto; 
