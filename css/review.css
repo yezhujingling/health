@@ -1,16 +1,30 @@
+/* 方案3：分区域配色（最专业、最舒适，推荐最终使用） */
 :root {
-    /* 健康绿系主配色（保健品专业定位） */
-    --primary-green: #1E5631;       /* 主色：深森林绿 */
-    --accent-green: #2D8A4E;        /* 强调色：亮绿（按钮/高亮） */
-    --light-green-bg: #F0F7F2;       /* 浅绿背景（卡片/模块） */
-    --dark-green-bg: #0F3621;        /* 深绿背景（保障模块） */
-    --text-main: #1A202C;            /* 主文字：深灰 */
-    --text-muted: #4A5568;           /* 辅助文字：中灰 */
-    --border-color: #E2E8F0;         /* 边框：浅灰 */
-    --pill-green: #E6FFFA;           /* 标签背景：极浅绿 */
-    --pill-green-text: #285E61;      /* 标签文字：深绿 */
-    --link-color: #2B6CB0;           /* 外链颜色：标准蓝（不与主色冲突） */
-    --white: #FFFFFF;
+    /* 深绿：仅用于强调区 */
+    --bg-emphasis: #1B4332;
+    /* 淡绿：用于正文/分类区 */
+    --bg-light: #F0F7F2;
+    /* 通用色 */
+    --text-main: #1A202C;
+    --text-white: #FFFFFF;
+    --btn-purple: #C026D3;
+}
+
+/* 1. 正文/分类区背景（淡绿，阅读舒适） */
+body, .content-main {
+    background: var(--bg-light);
+}
+
+/* 2. 核心结论卡片/页眉背景（深绿，突出重点） */
+section.verdict-card, .hero-header {
+    background: linear-gradient(135deg, #2D6A4F 0%, var(--bg-emphasis) 100%);
+    color: var(--text-white);
+}
+
+/* 3. 侧边栏/其他区域适配 */
+.sidebar-column .author-card {
+    background: white;
+    border: 1px solid var(--border-color);
 }
 
 * { box-sizing: border-box; scroll-behavior: smooth; }
